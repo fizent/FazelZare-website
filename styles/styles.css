@@ -1,0 +1,622 @@
+:root {
+    --h-color: rgb(255, 255, 255);
+    --color-p: rgb(142,143,149);
+    --color-text-and-btn: rgb(10, 145, 255);
+    --color-bold: rgb(78, 79, 235);
+    --background-color-hover: #0056b3;
+    --font-size-text: 16px;
+    --h2-size-text: 30px;
+    --color-relax:rgb(213, 241, 255);
+    --color-back-box: rgb(81, 81, 81);
+    --border-radius: 8px;
+}
+
+@font-face {  
+    font-family: vazir;  
+    font-style: normal;  
+    font-weight: 100;  
+    src: url("../fonts/Vazir-Thin.eot");  
+    src: url("../fonts/Vazir-Thin.woff") format("woff"),  
+         url("../fonts/Vazir-Thin.ttf") format("truetype"),  
+         url("../fonts/Vazir-Thin.woff2") format("woff2");  
+}  
+
+@font-face {  
+    font-family: vazir;  
+    font-style: normal;  
+    font-weight: 300;  
+    src: url("../fonts/Vazir-Light.eot");  
+    src: url("../fonts/Vazir-Light.woff") format("woff"),  
+         url("../fonts/Vazir-Light.ttf") format("truetype"),  
+         url("../fonts/Vazir-Light.woff2") format("woff2");  
+}  
+
+@font-face {  
+    font-family: vazir;  
+    font-style: normal;  
+    font-weight: 400;  
+    src: url("../fonts/Vazir-Regular.eot");  
+    src: url("../fonts/Vazir-Regular.woff") format("woff"),  
+         url("../fonts/Vazir-Regular.ttf") format("truetype"),  
+         url("../fonts/Vazir-Regular.woff2") format("woff2");  
+}  
+
+@font-face {  
+    font-family: vazir;  
+    font-style: normal;  
+    font-weight: 950;  
+    src: url("../fonts/Vazir-Black.eot");  
+    src: url("../fonts/Vazir-Black.woff") format("woff"),  
+         url("../fonts/Vazir-Black.ttf") format("truetype"),  
+         url("../fonts/Vazir-Black.woff2") format("woff2");  
+}
+body {
+    direction: rtl;
+    box-sizing: border-box;
+    background-color: rgb(34, 37, 41);
+    margin: 0px;
+}
+
+
+nav {  
+    display: flex;  
+    justify-content: space-between;  
+    flex-direction: row-reverse;  
+    align-items: center;  
+    border-radius: var(--border-radius);  
+    padding: 0;  
+    position: fixed;  
+    width: 100%;   
+    z-index: 1000;   
+    box-shadow: 0 2px 5px var(--background-color-hover); /* خط سایه‌ای */  
+}
+.a_link_header {
+    text-decoration: none;
+    color: var(--color-p);
+}
+.moon_sun {
+    padding-left: 30px;
+    cursor: pointer;
+    background-color: #fff0;
+    border: 0px;
+
+}
+
+.menu_toggle {  
+    display: none; /* به‌طور پیش‌فرض پنهان است */  
+}  
+
+.menu_mobile  {
+    display: none;
+}
+
+
+.ul {
+    display: flex; 
+}
+
+
+.logo {
+    padding-right: 30px;
+}
+
+.li_header {
+    list-style: none;
+    padding: 0px 10px 0px 10px;
+    color: var(--color-p);
+    font-family: vazir;
+    cursor: pointer;
+    
+
+}
+
+
+.li_header:hover {
+    background-color: var(--background-color-hover);
+    border-radius: var(--border-radius);
+    color: white;
+}
+
+.img_logo {
+    width: 60px;
+    cursor: pointer;
+}
+
+nav.scrolled {
+    background-color: #00042c; /* رنگ هنگام اسکرول */
+}
+
+.section_start {
+    align-items: center;
+    position: relative;
+}
+
+.center_page {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.position-absolute {
+    position: absolute;
+
+}
+
+
+#move1 {
+    top: 50px;
+    right: 0px;
+    fill: #fd7e14;
+}
+
+
+#move2 {
+    bottom: 0px;
+    fill: #3f41c8;
+    left: 20px;
+}
+
+#move3 {
+    fill: #abc6f9;
+    left: 0;
+}
+
+#img_hello {
+    margin-bottom: -40px;
+    width: 50px;
+}
+
+.background_fazel {
+    background-image: url(../images/FazelWebDesgineL-min.png);
+    height: 574px;
+    width: 800px;
+    background-size: cover;
+}
+.my_profile {
+    padding-left: 30px;
+}
+.h1 {
+    color: var(--h-color);
+    font-size: 50px;
+    text-wrap: nowrap;
+
+} 
+
+.color_blue {
+    color: var(--color-text-and-btn);
+}
+
+#animation {  
+    border-right: 2px solid var(--color-text-and-btn); /* خط مرزی */  
+    white-space: nowrap; /* جلوگیری از شکستن خط */  
+    overflow: hidden; /* پنهان کردن متن اضافی */  
+    width: 0; /* شروع از عرض صفر */  
+    animation: typing 3s steps(40, end) forwards, borderRemoval 0.5s 3.5s forwards; /* اعمال انیمیشن‌ها */  
+    animation-fill-mode: forwards; /* حفظ حالت نهایی انیمیشن */  
+}  
+
+
+#customer {  
+    position: relative;  
+    display: inline-block;
+    
+}  
+
+#customer::after {  
+    content: '';  
+    position: absolute;  
+    left: 0;  
+    bottom: 0;  
+    height: 2px; /* ضخامت خط */  
+    background-color: blue; /* رنگ خط */  
+    width: 100%; /* عرض خط */  
+    transform: translateX(20%); /* خط را از سمت چپ خارج می‌کند */  
+    animation: slide 10s forwards; /* انیمیشن */  
+}
+.btn { 
+    color: var(--h-color);  
+    box-shadow: 1px 3px 10px var(--color-bold);
+    background-color: #007bff; /* رنگ آبی */  
+    padding: 15px 30px;  
+    border: none;  
+    border-radius: 5px;  
+    font-size: 16px;  
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-left: 30px;
+    text-decoration: none;
+}  
+
+.btn:hover { 
+    box-shadow: none; 
+    background-color: var(--background-color-hover); /* رنگ تیره‌تر در حالت هاور */  
+} 
+.h2_description {
+    font-size: var(--h2-size-text);
+    color: var(--h-color);
+    text-align: center;
+}
+
+#text_align {
+    text-align: start;
+}
+#skin{
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+    color: var(--h-color);
+
+}
+
+.h3_skins {
+    text-align: start;
+    font-size: 24px;
+}
+
+.li_skin {
+    list-style: none;
+    font-size: 18px;
+    color: var(--color-relax);
+}
+
+
+
+/* box_service*/
+.section_service  {
+    flex-direction: column;
+}
+.container_box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+.box_service {
+  background-color: var(--color-back-box);
+  border: 2px solid transparent; /* حذف حاشیه */  
+  margin: 10px;
+  border-radius: var(--border-radius);
+  padding: 5px 60px 5px 60px;
+  text-align: center;
+  animation-duration: 3s; /* مدت زمان انیمیشن */  
+  animation-iteration-count: infinite; /* تکرار نامحدود انیمیشن */  
+}
+
+
+
+
+.box_service:hover {
+    animation: none;
+    background-color: var(--background-color-hover);
+
+}
+
+.img_services {
+    width: 150px;
+}
+
+
+
+#shadow_animationHTML {  
+    animation-name: shadow-orange;  
+}  
+
+#shadow_animationWordpress {  
+    animation-name: shadow-blue;  
+}  
+
+#shadow_animationSeo {  
+    animation-name: shadow-lightblue;  
+}  
+
+#shadow_animationAnimation {  
+    animation-name: shadow-purple;  
+}  
+
+#shadow_animationUIUX {  
+    animation-name: shadow-yellow;  
+}
+
+.container_sample_wrok {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Sample_work {
+    background-color: var(--color-back-box);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.img_work {
+    width: 100%;
+    height: 200px;
+    border: 3px solid var(--color-p);
+
+}
+
+#back_footer {
+    background-color: rgb(0, 0, 0);
+    padding-top: 50px;
+    padding-bottom: 100px;
+    
+}
+
+
+
+#light {
+    background-color: var(--background-color-hover);
+    border-radius: var(--border-radius);
+}
+
+.container_footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.footer_item {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.icon_conection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#karlancerr {
+    background-color: var(--color-text-and-btn);
+    border-radius: var(--border-radius);
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+
+/*  code repeat */
+.style_text {
+    font-family: vazir;
+    font-style: normal;
+    text-wrap: wrap;
+}
+
+.p_color_text {
+    color: var(--color-p);
+    font-size: var(--font-size-text);
+
+}
+
+.section_start {
+    align-items: center;
+    position: relative;
+}
+
+.center_page {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.color_matter {
+    color: var(--color-relax);
+}
+
+.color_white {
+    color: var(--h-color);
+}
+
+.color_footer_white {
+    color: rgb(255, 255, 255);
+}
+
+.container_btns_start {
+    padding-top: 50px;
+}
+.section_description {
+    padding-top: 150px;
+}
+
+.li_footer {
+    list-style: none;
+}
+ 
+.li_footer:hover {
+    transform: translate(-20px);
+    color: var(--color-relax);
+}
+
+.text_align {
+    text-align: center;
+}
+
+
+
+
+
+/* animation */
+@keyframes typing {  
+    from {  
+        width: 0; /* شروع از عرض صفر */  
+    }  
+    to {  
+        width: 100%; /* پایان با عرض کامل */  
+    }  
+}  
+@keyframes borderRemoval {  
+    from {  
+        border-right: 2px solid var(--color-text-and-btn); /* حفظ رنگ اصلی */  
+    }  
+    to {  
+        border-right: 2px solid transparent; /* تغییر به شفاف */  
+    }  
+}  
+
+
+@keyframes slide {  
+    to {  
+        transform: translateX(0); /* خط به سمت راست حرکت می‌کند */  
+    }  
+}  
+/* animation shdow */
+@keyframes shadow-orange {  
+    0%, 100% {  
+        box-shadow: 0 0 10px orange; /* سایه اولیه */  
+    }  
+    50% {  
+        box-shadow: 0 0 20px white; /* سایه میانی */  
+    }  
+}  
+
+@keyframes shadow-blue {  
+    0%, 100% {  
+        box-shadow: 0 0 10px white;  
+    }  
+    50% {  
+        box-shadow: 0 0 20px blue;  
+    }  
+}  
+
+@keyframes shadow-lightblue {  
+    0%, 100% {  
+        box-shadow: 0 0 10px lightblue;  
+    }  
+    50% {  
+        box-shadow: 0 0 20px darkblue;  
+    }  
+}  
+
+@keyframes shadow-purple {  
+    0%, 100% {  
+        box-shadow: 0 0 10px orange;  
+    }  
+    50% {  
+        box-shadow: 0 0 20px purple;  
+    }  
+}  
+
+@keyframes shadow-yellow {  
+    0%, 100% {  
+        box-shadow: 0 0 10px blue;  
+    }  
+    50% {  
+        box-shadow: 0 0 20px yellow;  
+    }  
+}  
+
+
+
+
+
+
+/* responsive */
+@media (max-width: 1024px) {  
+    .ul {  
+        display: none;  
+    }  
+
+    .menu_toggle {
+        display: block;
+    }
+    .menu_mobile {  
+        display: none; 
+        position: absolute;  
+        top: 100%;
+        left: 0; 
+        width: 100%;
+        background-color: var(--color-back-box);; 
+        z-index: 1000; 
+    }
+
+    .a_link_header:hover {
+        color: var(--background-color-hover);
+        text-decoration: none;
+    }
+
+    .li_header:hover {
+        background-color: #fff0;
+        border-radius: 0px;
+    }
+    
+    
+    .background_fazel {
+        background-image: none;
+
+    }
+
+}
+
+
+
+
+@media (max-width: 768px) {  
+
+
+    .center_page {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+    .background_fazel {
+        background-image: url(../images/FazelWebDesgineL-min.png);
+        background-size: cover;
+        width: 400px;
+        height: 300px;
+        margin-top: 70px;
+    }
+
+    #img_hello {
+        display: none;
+    }
+
+    .my_profile {
+        text-align: center;
+        
+    }
+
+    .h1 {
+        font-size: 35px;
+
+    }
+
+    .position-absolute {
+        display: none;
+    }
+
+    .btn {
+        padding: 15px 20px;
+    }
+
+    .h2_description {
+        font-size: 25px;
+    }
+
+    .h3_skins {
+        font-size: 18px;
+    }
+
+    .font_responsive_box_service {
+        font-size: 18px;
+    }
+
+    .box_service {
+        width: 100%;
+    }
+}  
+
+
+
+
